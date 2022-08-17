@@ -9,7 +9,7 @@
   </header>
   
   <h5 class="stop-list-title">
-    Loading ({{ loadingStops?.length }})
+    Loading ({{ loadingStops.length }})
   </h5>
   <ul class="stop-list">
     <route-item *ngFor="let stop of loadingStops; let $i = index; let $last = last" 
@@ -22,7 +22,7 @@
   </ul>
 
   <h5 class="stop-list-title">
-    Loading ({{ unloadingStops?.length }})
+    Loading ({{ unloadingStops.length }})
   </h5>
   <ul class="stop-list">
     <route-item *ngFor="let stop of unloadingStops; let $i = index; let $last = last" 
