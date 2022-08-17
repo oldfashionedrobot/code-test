@@ -1,0 +1,76 @@
+.route-item-title {
+  position: relative;
+  font-weight: bold;
+  font-size: 15px;
+  color: #2a2a2a;
+
+  &::before{ 
+    content: "";
+    z-index: 2;
+    display: block;
+    position: absolute;
+    background-color: #d3d3d3;
+    border-radius: 100px;
+    left: -24px;
+    top: 5px;
+    width: 8px;
+    height: 8px;
+  }
+
+  &::after {
+    content: "";
+    z-index: 1;
+    display: block;
+    position: absolute;
+    border-radius: 100px;
+    background-color: white;
+    border: 2px solid white;
+    left: -30px;
+    top: -1px;
+    width: 16px;
+    height: 16px;
+  }
+
+  &.active {
+    &::before {
+      background-color: #4172f6;
+    }
+
+    &::after {
+      border-color: #4172f6;
+    }
+  }
+}
+
+.route-item {
+  margin-bottom: 30px;
+  position: relative;
+
+  &.last-stop::after {
+    content: "";
+    position: absolute;
+    display: block;
+    background-color: white;
+    width: 5px;
+    height: 70px;
+    left: -23px;
+    top: 0px;
+  }
+}
+
+.time-badge {
+  background: white;
+  border-radius: 4px;
+  border: 2px solid #d3d3d3;
+  padding: 4px 8px;
+  color: #2a2a2a;
+  font-weight: bold;
+  font-size: 13px;
+  margin-right: 12px;
+}
+
+.stop-number {
+  font-size: 13px;
+  color: #9aa2b1;
+  font-weight: bold;
+}

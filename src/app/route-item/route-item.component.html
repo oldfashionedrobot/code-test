@@ -1,0 +1,18 @@
+<li class="route-item {{ lastStop == true ? 'last-stop' : '' }}">
+  <p *ngIf="stop?.address as address" 
+    class="route-item-title {{ active == true ? 'active' : '' }}">
+    {{ address.street1 }},
+    <span *ngIf="address.street2 != ''">{{ address.street2 }},</span>
+    {{ address.city }},
+    {{ address.state }}
+    {{ address.zip }}
+  </p>
+  <span *ngIf="stop?.expectedAt as timestamp"class="time-badge">
+    @
+    {{ timestamp * 1000 | date: 'haaaaa\'m\', EEE MM/dd/yyyy' }}
+  </span>
+  <span class="stop-number">
+    {{ stopType | titlecase }}
+    {{ stopNumber }}
+  </span>
+</li>

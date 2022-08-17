@@ -1,0 +1,72 @@
+$lightGrey: #f1f4fe;
+$midGrey: #d3d3d3;
+$grey: #9aa2b1;
+$darkGrey: #2a2a2a;
+$blue: #4172f6;
+
+
+.route-view {
+  max-width: 500px;
+  border-radius: 15px;
+  box-shadow: 0px 0px 20px 5px rgba(125, 125, 125, 0.3);
+  padding: 0 20px 20px;
+  background: white;
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .route-icon {
+    font-style: normal;
+    display: inline-block;
+    height: 30px;
+    line-height: 30px;
+    width: 30px;
+    background: $lightGrey;
+    border-radius: 5px;
+    vertical-align: middle;
+    margin-right: 10px;
+
+    &::before {
+      content: "%";
+      display: block;
+      width: 100%;
+      color: $blue;
+      text-align: center;
+    }
+  }
+
+  .stop-count {
+    font-weight: normal;
+    color: $grey;
+  } 
+}
+
+.stop-list-title {
+  margin: 0;
+  color: $grey;
+}
+
+.stop-list {
+  list-style: none;
+  list-style-position: inside;
+  border-left: 2px solid $midGrey;
+  margin-left: 10px;
+  padding-left: 19px;
+}
+
+button {
+  background: white;
+  border-radius: 8px;
+  border: 2px solid $midGrey;
+  padding: 6px 10px;
+  color: $darkGrey;
+  font-weight: bold;
+
+  &:hover {
+    background-color: $lightGrey;
+    cursor: pointer;
+  }
+}

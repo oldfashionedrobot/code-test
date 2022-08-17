@@ -1,0 +1,35 @@
+<div class="route-view">
+  <header>
+    <h3>
+      <i class="route-icon"></i>
+      Route
+      <span class="stop-count">({{ totalStops }})</span>
+    </h3>
+    <button>Show route</button>
+  </header>
+  
+  <h5 class="stop-list-title">
+    Loading ({{ loadingStops?.length }})
+  </h5>
+  <ul class="stop-list">
+    <route-item *ngFor="let stop of loadingStops; let $i = index; let $last = last" 
+      stopType="loading"
+      [stop]="stop" 
+      [stopNumber]="$i + 1"
+      [lastStop]="$last"
+      [active]="$i == 0">
+    </route-item>
+  </ul>
+
+  <h5 class="stop-list-title">
+    Loading ({{ unloadingStops?.length }})
+  </h5>
+  <ul class="stop-list">
+    <route-item *ngFor="let stop of unloadingStops; let $i = index; let $last = last" 
+      stopType="unloading"
+      [stop]="stop" 
+      [stopNumber]="$i + 1"
+      [lastStop]="$last">
+    </route-item>
+  </ul>
+</div>
